@@ -70,6 +70,12 @@ The rest of the `5.0.0` surface is additive: `userJourney` support was added to 
 | Android OS | :white_check_mark: >= 4.1 (Android API 16)   |
 | Wear OS    | :heavy_multiplication_x:                     |
 
+The camera-based liveness challenge additionally requires the host app to declare the `CAMERA` permission and hold it at runtime (request it at runtime on Android 6.0+). WebView camera support requires Android 5.0+ (API 21).
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+```
+
 ## Example App
 
 The current repository comes with an example Android application demonstrating 3 different hCaptcha usage patterns.
